@@ -4,14 +4,16 @@ using Contab.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Contab.Migrations
 {
     [DbContext(typeof(ContabDbContext))]
-    partial class ContabDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200927144510_Added_Card")]
+    partial class Added_Card
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
