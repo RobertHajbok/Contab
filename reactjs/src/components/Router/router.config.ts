@@ -67,6 +67,15 @@ export const appRouters: any = [
     component: LoadableComponent(() => import('../../scenes/Tenants')),
   },
   {
+    path: '/notes',
+    permission: 'Pages.Notes',
+    title: 'Notes',
+    name: 'note',
+    icon: 'file',
+    showInMenu: true,
+    component: LoadableComponent(() => import('../../scenes/Notes')),
+  },
+  {
     path: '/about',
     permission: '',
     title: 'About',

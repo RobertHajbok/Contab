@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <localizationDictionary culture="en">
   <texts>
+    <text name="Text" value="Text" />
+    <text name="Title" value="Title" />
     <text name="Notes" value="Notes" />
     <text name="HomePage" value="Home page" />
     <text name="About" value="About" />

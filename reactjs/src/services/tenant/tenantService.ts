@@ -4,7 +4,7 @@ import { EntityDto } from '../../services/dto/entityDto';
 import { GetAllTenantOutput } from './dto/getAllTenantOutput';
 import GetTenantOutput from './dto/getTenantOutput';
 import { PagedResultDto } from '../../services/dto/pagedResultDto';
-import {PagedTenantResultRequestDto} from './dto/PagedTenantResultRequestDto';
+import { PagedTenantResultRequestDto } from './dto/PagedTenantResultRequestDto';
 import UpdateTenantInput from './dto/updateTenantInput';
 import UpdateTenantOutput from './dto/updateTenantOutput';
 import http from '../httpService';

@@ -66,12 +66,12 @@ class Utils {
 
   getPageTitle = (pathname: string) => {
     const route = routers.filter(route => route.path === pathname);
-    const localizedAppName = L('AppName');
+    const appName = 'Contab';
     if (!route || route.length === 0) {
-      return localizedAppName;
+      return appName;
     }
 
-    return L(route[0].title) + ' | ' + localizedAppName;
+    return L(route[0].title) + ' | ' + appName;
   };
 
   getRoute = (path: string): any => {
