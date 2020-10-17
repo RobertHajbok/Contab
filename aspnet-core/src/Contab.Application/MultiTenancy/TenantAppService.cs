@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using Abp.Application.Services;
+﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.Domain.Repositories;
@@ -15,6 +13,8 @@ using Contab.Authorization.Users;
 using Contab.Editions;
 using Contab.MultiTenancy.Dto;
 using Microsoft.AspNetCore.Identity;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Contab.MultiTenancy
 {

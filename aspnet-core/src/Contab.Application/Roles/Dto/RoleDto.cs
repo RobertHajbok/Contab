@@ -1,9 +1,8 @@
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
 using Abp.Authorization.Roles;
-using Abp.AutoMapper;
 using Contab.Authorization.Roles;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Contab.Roles.Dto
 {

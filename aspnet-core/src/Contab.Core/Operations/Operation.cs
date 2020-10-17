@@ -14,7 +14,7 @@ namespace Contab.Operations
         public virtual decimal AddSubtract { get; set; }
 
         [Required]
-        [StringLength(5, MinimumLength = 100)]
+        [StringLength(100, MinimumLength = 5)]
         public virtual string Reason { get; set; }
 
         public virtual DateTime OperationDate { get; set; }
