@@ -5,12 +5,15 @@ using Contab.Cards;
 using Contab.Currencies;
 using Contab.Extensions;
 using Contab.MultiTenancy;
+using Contab.Operations;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contab.EntityFrameworkCore
 {
     public class ContabDbContext : AbpZeroDbContext<Tenant, Role, User, ContabDbContext>
     {
+        public virtual DbSet<Operation> Operations { get; set; }
+
         public virtual DbSet<Card> Cards { get; set; }
 
         public virtual DbSet<CardType> CardTypes { get; set; }

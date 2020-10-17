@@ -8,6 +8,9 @@ namespace Contab.Currencies
         EUR = 1,
 
         [Description("Pound sterling")]
-        GBP
+        GBP,
+
+        [Description("Romanian leu")]
+        RON
     }
 }

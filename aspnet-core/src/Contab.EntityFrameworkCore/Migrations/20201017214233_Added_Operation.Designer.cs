@@ -4,14 +4,16 @@ using Contab.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Contab.Migrations
 {
     [DbContext(typeof(ContabDbContext))]
-    partial class ContabDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201017214233_Added_Operation")]
+    partial class Added_Operation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1617,12 +1619,6 @@ namespace Contab.Migrations
                             Id = 2,
                             Description = "Pound sterling",
                             Name = "GBP"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Romanian leu",
-                            Name = "RON"
                         });
                 });
 
