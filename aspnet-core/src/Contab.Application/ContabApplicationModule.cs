@@ -5,9 +5,7 @@ using Contab.Authorization;
 
 namespace Contab
 {
-    [DependsOn(
-        typeof(ContabCoreModule), 
-        typeof(AbpAutoMapperModule))]
+    [DependsOn(typeof(ContabCoreModule), typeof(AbpAutoMapperModule))]
     public class ContabApplicationModule : AbpModule
     {
         public override void PreInitialize()

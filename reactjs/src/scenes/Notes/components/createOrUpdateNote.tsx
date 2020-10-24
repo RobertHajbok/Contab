@@ -6,6 +6,7 @@ import { FormComponentProps } from 'antd/lib/form';
 import FormItem from 'antd/lib/form/FormItem';
 import { L } from '../../../lib/abpUtility';
 import rules from './createOrUpdateNote.validation';
+import TextArea from 'antd/lib/input/TextArea';
 
 export interface ICreateOrUpdateNoteProps extends FormComponentProps {
     visible: boolean;
@@ -61,10 +62,10 @@ class CreateOrUpdateNote extends React.Component<ICreateOrUpdateNoteProps> {
             <Modal visible={visible} onCancel={onCancel} onOk={onCreate} title={L('Notes')} width={550}>
                 <Form>
                     <FormItem label={L('Title')} {...formItemLayout}>
-                        {getFieldDecorator('title', { rules: rules.title })(<Input />)}
+                        {getFieldDecorator('title', { rules: rules.title })(<Input minLength={3} maxLength={25} />)}
                     </FormItem>
                     <FormItem label={L('Text')} {...tailFormItemLayout}>
-                        {getFieldDecorator('text', { rules: rules.text })(<Input />)}
+                        {getFieldDecorator('text', { rules: rules.text })(<TextArea rows={20} minLength={20} maxLength={5000} />)}
                     </FormItem>
                 </Form>
             </Modal>

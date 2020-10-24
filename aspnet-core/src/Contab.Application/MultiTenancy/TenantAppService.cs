@@ -27,14 +27,8 @@ namespace Contab.MultiTenancy
         private readonly RoleManager _roleManager;
         private readonly IAbpZeroDbMigrator _abpZeroDbMigrator;
 
-        public TenantAppService(
-            IRepository<Tenant, int> repository,
-            TenantManager tenantManager,
-            EditionManager editionManager,
-            UserManager userManager,
-            RoleManager roleManager,
-            IAbpZeroDbMigrator abpZeroDbMigrator)
-            : base(repository)
+        public TenantAppService(IRepository<Tenant> repository, TenantManager tenantManager, EditionManager editionManager, UserManager userManager, RoleManager roleManager,
+            IAbpZeroDbMigrator abpZeroDbMigrator) : base(repository)
         {
             _tenantManager = tenantManager;
             _editionManager = editionManager;
@@ -49,15 +43,11 @@ namespace Contab.MultiTenancy
 
             // Create tenant
             var tenant = ObjectMapper.Map<Tenant>(input);
-            tenant.ConnectionString = input.ConnectionString.IsNullOrEmpty()
-                ? null
-                : SimpleStringCipher.Instance.Encrypt(input.ConnectionString);
+            tenant.ConnectionString = input.ConnectionString.IsNullOrEmpty() ? null : SimpleStringCipher.Instance.Encrypt(input.ConnectionString);
 
             var defaultEdition = await _editionManager.FindByNameAsync(EditionManager.DefaultEditionName);
             if (defaultEdition != null)
-            {
                 tenant.EditionId = defaultEdition.Id;
-            }
 
             await _tenantManager.CreateAsync(tenant);
             await CurrentUnitOfWork.SaveChangesAsync(); // To get new tenant's id.

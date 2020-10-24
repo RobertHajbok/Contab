@@ -11,6 +11,9 @@
     <RootNamespace>Contab</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Contab.Core\Contab.Core.csproj" />
   </ItemGroup>
 </Project>
