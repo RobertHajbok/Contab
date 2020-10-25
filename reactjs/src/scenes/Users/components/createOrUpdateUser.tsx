@@ -92,7 +92,7 @@ class CreateOrUpdateUser extends React.Component<ICreateOrUpdateUserProps> {
     return (
       <Modal visible={visible} cancelText={L('Cancel')} okText={L('OK')} onCancel={onCancel} onOk={onCreate} title={'User'}>
         <Tabs defaultActiveKey={'userInfo'} size={'small'} tabBarGutter={64}>
-          <TabPane tab={'User'} key={'user'}>
+          <TabPane tab={L('Details')} key={'user'}>
             <FormItem label={L('Name')} {...formItemLayout}>
               {getFieldDecorator('name', { rules: rules.name })(<Input />)}
             </FormItem>
@@ -136,7 +136,7 @@ class CreateOrUpdateUser extends React.Component<ICreateOrUpdateUserProps> {
               </FormItem>
             ) : null}
             <FormItem label={L('IsActive')} {...tailFormItemLayout}>
-              {getFieldDecorator('isActive', { valuePropName: 'checked' })(<Checkbox>Aktif</Checkbox>)}
+              {getFieldDecorator('isActive', { valuePropName: 'checked' })(<Checkbox>{L('Active')}</Checkbox>)}
             </FormItem>
           </TabPane>
           <TabPane tab={L('Roles')} key={'rol'}>

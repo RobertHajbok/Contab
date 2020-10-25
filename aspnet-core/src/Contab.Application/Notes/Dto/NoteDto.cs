@@ -1,5 +1,4 @@
 ﻿using Abp.Application.Services.Dto;
-using Contab.Users.Dto;
 using System.ComponentModel.DataAnnotations;
 
 namespace Contab.Notes.Dto
@@ -13,7 +12,5 @@ namespace Contab.Notes.Dto
         [Required]
         [StringLength(5000, MinimumLength = 20)]
         public virtual string Text { get; set; }
-
-        public UserDto User { get; set; }
     }
 }

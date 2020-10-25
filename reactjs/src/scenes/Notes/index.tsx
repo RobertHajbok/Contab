@@ -117,7 +117,7 @@ class Note extends AppComponentBase<INoteProps, INoteState> {
         const { notes } = this.props.noteStore;
         const columns = [
             { title: L('Title'), dataIndex: 'title', key: 'title', width: 150, render: (text: string) => <div>{text}</div> },
-            { title: L('Text'), dataIndex: 'text', key: 'text', width: 150, render: (text: string) => <div>{text}</div> },
+            { title: L('Text'), dataIndex: 'text', key: 'text', width: 150, render: (text: string) => <div style={{whiteSpace:"pre"}}>{text}</div> },
             {
                 title: L('Actions'),
                 width: 150,

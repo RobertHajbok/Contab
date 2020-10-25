@@ -83,7 +83,7 @@ class CreateOrUpdateRole extends React.Component<ICreateOrUpdateRoleProps> {
         onOk={this.props.onOk}
       >
         <Tabs defaultActiveKey={'role'} size={'small'} tabBarGutter={64}>
-          <TabPane tab={L('RoleDetails')} key={'role'}>
+          <TabPane tab={L('Details')} key={'role'}>
             <FormItem label={L('RoleName')} {...formItemLayout}>
               {getFieldDecorator('name', { rules: rules.name })(<Input />)}
             </FormItem>
@@ -94,7 +94,7 @@ class CreateOrUpdateRole extends React.Component<ICreateOrUpdateRoleProps> {
               {getFieldDecorator('description')(<Input />)}
             </FormItem>
           </TabPane>
-          <TabPane tab={L('RolePermission')} key={'permission'}>
+          <TabPane tab={L('Permissions')} key={'permission'}>
             <FormItem {...tailFormItemLayout}>
               {getFieldDecorator('grantedPermissions', { valuePropName: 'value' })(<CheckboxGroup options={options} />)}
             </FormItem>
